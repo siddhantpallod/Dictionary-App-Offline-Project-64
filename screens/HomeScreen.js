@@ -50,7 +50,7 @@ export default class HomeScreen extends React.Component{
     getWord = (word) => {
         var searchKeyword = word.toLowerCase();
         var url = "https://rupinwhitehatjr.github.io/dictionary/"+searchKeyword+".json";
-        console.log(url);
+
         //console.log(url)
         return fetch(url)
         .then((data)=>{
@@ -68,11 +68,11 @@ export default class HomeScreen extends React.Component{
             if(responseObject)
             {
               var wordData = responseObject.definitions[0]              
-              var definition=wordData.description
-              var lexicalCategory=wordData.wordtype              
+              var definition = wordData.description
+              var lexicalCategory = wordData.wordtype              
               this.setState({
                 "word" : this.state.text, 
-                "defination" :definition,
+                "definition" :definition,
                 "lexicalCategory": lexicalCategory   
               });
             }
@@ -80,7 +80,7 @@ export default class HomeScreen extends React.Component{
             {
               this.setState({
                 "word" : this.state.text, 
-                "defination" :"Not Found",                
+                "definition" :"Not Found",                
               });    
             }        
         });        
