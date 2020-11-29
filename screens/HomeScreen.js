@@ -19,7 +19,7 @@ export default class HomeScreen extends React.Component{
             isSearchPressed : false,
             word : 'Loading ...',
             exapmles : [],
-            definition : '',
+            defination : '',
         }
     }
 
@@ -33,7 +33,7 @@ export default class HomeScreen extends React.Component{
             this.setState({
                 "word" : word,
                 "lexicalCategory" : lexicalCategory,
-                "definition" : definition
+                "defination" : definition
             })
         }
 
@@ -72,7 +72,7 @@ export default class HomeScreen extends React.Component{
               var lexicalCategory = wordData.wordtype              
               this.setState({
                 "word" : this.state.text, 
-                "definition" :definition,
+                "defination" :definition,
                 "lexicalCategory": lexicalCategory   
               });
             }
@@ -80,7 +80,7 @@ export default class HomeScreen extends React.Component{
             {
               this.setState({
                 "word" : this.state.text, 
-                "definition" :"Not Found",                
+                "defination" :"Not Found",                
               });    
             }        
         });        
